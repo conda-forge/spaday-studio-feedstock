@@ -1,6 +1,5 @@
 context:
-  version: "0.1.0"
-  python_min: "3.11"
+  version: "0.2.0"
 
 package:
   name: spaday-studio
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/spaday-studio/spaday_studio-${{ version }}.tar.gz
-  sha256: a1e59d172a2c80f40cedb5d47ba9d357995478bc8cc3491a81664362de7d82b2
+  sha256: cf32143039ac7430a3a2d6e9f9b39a85a6901a68e417bdd49a4f825b6f67cabd
 
 build:
   number: 0
@@ -29,9 +28,10 @@ requirements:
     - python >=${{ python_min }}
     - mcp >=2,<3
     - pydantic >=2
-    - spaday >=0.7,<1.0
+    - spaday >=0.11.4,<1.0
+    - spaday-codemirror >=0.2,<0.3
     - starlette
-    - transports >=0.8,<0.9
+    - transports >=0.10,<0.11
 
 tests:
   - python:
